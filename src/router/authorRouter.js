@@ -25,7 +25,7 @@ function router(nav,usernav){
                 usernav,
                 title:'Library',
                 authors,
-                role : 'false'
+                role : ''
             });
            }
         })  
