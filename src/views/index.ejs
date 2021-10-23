@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup</title>
+    <link href="//css/bootstrap.min.css" rel="stylesheet">
+	<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+</head>
+<body>
+    
+    <div class="flip-container login" >
+         
+        <div class="flipper login-form" id="flipper">  
+            
+            <div class="front">
+                
+                <h1 class="title">Login</h1>
+                <% if(nouser!= ''){%>
+                    <div class="alert alert-danger" role="alert" style="padding: 2px;">
+                        <%=nouser%>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" style="width:4px;height: 4px;">
+                            <span aria-hidden="true">$times;</span> -->
+                        </button>
+                      </div>
+                      <%}%>
+                  
+                <form  method="post" action="/login/admin-user" class="login1" id="login-index">
+                    <input type="text" placeholder="Username" id="username" name="username"/><br>
+                    <input type="password" placeholder="Password" id="password" name="password"/>
+                    <br>
+                    <button class="bt" type="submit">Login</button>
+                    <!-- onclick="return valid();" -->
+                </form>
+                <br><a href="/login/sign"><button class="orange flipbutton" id="loginButton">SignUp →</button></a>
+            </div>
+            
+           
+        </div>
+        <!-- <script src="login.js"></script> -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+        <script src="/js/flipping.js"></script>
+</body>
+</html>
